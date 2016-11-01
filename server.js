@@ -11,8 +11,8 @@ app.use(express.static(path.join(root, 'bower_components')));
 app.use(express.static(path.join(root, 'node_modules')));
 app.use(bp.json());
 
-// require('./server/config/mongoose.js');
-// require('./server/config/routes.js')(app);
+require('./server/config/mongoose.js');
+require('./server/config/routes.js')(app);
 
 app.listen(port, function(){
 	console.log(`Server is running on ${port}`)
